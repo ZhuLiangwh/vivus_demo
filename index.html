@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<style>
+.radar{
+
+  background: #ea3a3a;
+  border-radius: 50px;
+  box-shadow: inset 0 0 25px rgba(0,0,0,.25),0 5px 0 3px rgba(255,25,25,.75),0 10px 0 10px rgba(0,0,0,.75);
+  content: ' ';
+  display: block;
+  height: 50px;
+  margin-left: 746px;
+  margin-top: 390px;
+  position: absolute;
+  width: 50px;
+
+  -webkit-animation:radar 7s linear infinite;
+  animation:radar 7s linear infinite
+}
+@keyframes radar{
+    0%{
+      box-shadow:inset 0 0 25px rgba(0,0,0,.25),0 5px 0 3px rgba(255,25,25,.75),0 10px 0 10px rgba(0,0,0,.75),0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0)
+    }
+    25%{
+      box-shadow:inset 0 0 25px rgba(0,0,0,.25),0 5px 0 3px rgba(255,25,25,.75),0 10px 0 10px rgba(0,0,0,.75),0 0 0 100px rgba(0,0,0,.25),0 0 0 0 rgba(0,0,0,.25),0 0 0 430px rgba(0,0,0,.1)}
+    50%{box-shadow:inset 0 0 25px rgba(0,0,0,.25),0 5px 0 3px rgba(255,25,25,.75),0 10px 0 10px rgba(0,0,0,.75),0 0 0 200px rgba(0,0,0,0),0 0 0 100px rgba(0,0,0,0),0 0 0 960px rgba(0,0,0,0)}
+}
+
+@-webkit-keyframes radar{
+  0%{box-shadow:inset 0 0 25px rgba(0,0,0,.25),0 5px 0 3px rgba(255,25,25,.75),0 10px 0 10px rgba(0,0,0,.75),0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0),0 0 0 0 rgba(0,0,0,0)}
+  15%{box-shadow:inset 0 0 25px rgba(0,0,0,.25),0 5px 0 3px rgba(255,25,25,.75),0 10px 0 10px rgba(0,0,0,.75),0 0 0 100px rgba(0,0,0,.25),0 0 0 0 rgba(0,0,0,.25),0 0 0 430px rgba(0,0,0,.1)}
+  50%{box-shadow:inset 0 0 25px rgba(0,0,0,.25),0 5px 0 3px rgba(255,25,25,.75),0 10px 0 10px rgba(0,0,0,.75),0 0 0 200px rgba(0,0,0,0),0 0 0 100px rgba(0,0,0,0),0 0 0 960px rgba(0,0,0,0)}
+}
+
+</style>
+<body>
+  <div class="radar">
+
+  </div>
+
+
+    <div class="tacosvg">
+      <svg id="taco" width="82px" height="70px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           viewBox="0 0 88.3 76" style="enable-background:new 0 0 88.3 76;" xml:space="preserve">
+      <line id="XMLID_1005_" style="fill:none;stroke:#1E181A;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="10.7" y1="13" x2="20.7" y2="23"/>
+      <line id="XMLID_1004_" style="fill:none;stroke:#1E181A;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="75" y1="13" x2="65" y2="23"/>
+      <line id="XMLID_1003_" style="fill:none;stroke:#1E181A;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="43.5" y1="3" x2="43.5" y2="17.1"/>
+      <path id="XMLID_1002_" style="fill:none;stroke:#1E181A;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+          M25,33.9c5.9-3.5,12.9-5.6,20.3-5.6C67.3,28.3,85,46.1,85,68h-4.6"/>
+      <path id="XMLID_1001_" style="fill:none;stroke:#1E181A;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+          M75.3,73.2c0-19.9-16.1-36.1-36.1-36.1c-19.9,0-36.1,16.1-36.1,36.1H75.3z"/>
+      <path id="XMLID_1000_" style="fill:none;stroke:#1E181A;stroke-width:4.2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" d="
+          M23.5,56.3c0,0,1.6,2.7,5.7,2.7c4.2,0,5.4-2.7,9.1-2.7c3.8,0,4.2,2.7,8.6,2.7c4.4,0,5.5-1.3,8.1-2.7"/>
+      </svg>
+    </div>  
+
+    <script src="bower_components/vivus/dist/vivus.js"></script>
+    <script>
+       new Vivus('taco', {
+        type: 'oneByOne', 
+        duration: 100, 
+        start: 'inViewport'
+    }); 
+    
+    </script>
+</body>
+</html>
